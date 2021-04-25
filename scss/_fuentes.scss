@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body{
+	font-family: $font;
+	font-weight: $font-regular;
+}
+
+.type-light{
+	font-family: $font;
+	font-weight: $font-light;
+}
+.type-regular{
+	font-family: $font;
+	font-weight: $font-regular;
+}
+.type-medium{
+	font-family: $font;
+	font-weight: $font-medium;
+}
+.type-bold{
+	font-family: $font;
+	font-weight: $font-bold;
+}

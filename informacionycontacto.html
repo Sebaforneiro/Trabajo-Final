@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>La Cueva de Atilio - Contactanos y te ayudamos</title>
+		<meta charset=utf-8>
+		<meta name=viewport content="width=device-width, initial-scale=1 shrink-to-fit=no">
+
+		<meta name="description" content="Conoce donde estamos y como contactarnos. Completa el formulario y dejanos tu mensaje que te escribimos a la brevedad">
+		<meta name="keywords" content="MUEBLES, MADERA, CONTACTANOS, ESCRIBINOS, DIRECCION, TELEFONO, UBICACION">
+		<meta name="author" content="La Cueva de Atilio">
+
+		<meta property="og:title" content="La Cueva de Atilio">
+		<meta property="og:site_name" content="La Cueva de Atilio">	
+		<meta property="og:description" content="Conoce donde estamos y como contactarnos. Completa el formulario y dejanos tu mensaje que te escribimos a la brevedad">
+		<meta property="og:image" content="">
+		
+		<meta name=language content="es">
+
+		<link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/media/favicon.png" type="image/x-icon">	
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+   		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+		<header id="header">
+			<a href="index.html" class="miLogo"><img src="media/logoredondook.png" alt="Bienvenidos"></a>
+			<nav>
+				<ul>
+		        	<li><a href="nosotrosmuebles.html">Nosotros</a></li>
+		     		<li><a href="mueblesenmadera.html">Muebles</a></li>
+		     		<li><a href="decoraciondeinteriores.html">Decoracion</a></li>
+	    	  		<li><a href="enviosrapidos.html">Envios</a></li>
+	     			<li><a href="serviciosderestauracion.html">Servicios</a></li>
+ 		     		<li><a href="informacionycontacto.html">Contacto</a></li>
+			    </ul>
+			</nav>
+		</header>	
+		<section id="contacto">
+			<div class="datos">
+				<h3>Veni a conocernos</h3>
+				<p><span>Dirección:</span>Juana Azurduy 1580</p>
+				<p><span>Telefono:</span>1146223566</p>
+				<p><span>Email:</span>seba@seba.com.ar</p>
+				<p><span>Horario:</span>Lunes a Sabado de 10:00 a 18:00 hs</p>
+			</div>
+			<div class="formulario">
+				<h3>Dejanos tu consulta,
+				te respondemos a la brevedad.</h3>
+	      		<form action="recibe.html" method="GET">
+					<input type="text" name="Campo_nombre" placeholder="Nombre y Apellido">
+					<input type="email" name="Campo_email" placeholder="Email">
+					<input type="tel" name="Campo_telefono" placeholder="Telefono">
+					<textarea name="Campo_area" placeholder="Dejanos tu mensaje"></textarea>
+					<div class="newsForm">
+						<label for="newsletter">¿Desea recibir nuestras novedades?</label>
+						<input type="checkbox" id="newsletter" name="newsletter" value="si">
+					</div>	
+					<div class="asuntoForm">
+						<label for="asuntos">Asunto:</label>
+						<select id="asuntos" name="asuntos" class="botonForm">
+							<option value="1" >Consulta</option>
+							<option value="2" >Reclamo</option>
+							<option value="3" >Otro</option>
+						</select>
+					</div>	
+					<div class="contBotonForm">
+							<!-- Button trigger modal -->
+						<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+						ENVIAR FORMULARIO
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						 	<div class="modal-dialog">
+						    	<div class="modal-content">
+						      		<div class="modal-header">
+						        		<h5 class="modal-title" id="exampleModalLabel">Gracias por contactarnos</h5>
+						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          			<span aria-hidden="true">&times;</span>
+						        		</button>
+						      		</div>
+						  	    	<div class="modal-body">
+						    		  	Te estaremos respondiendo a la brevedad.
+						      		</div>
+						      		<div class="modal-footer">
+						        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						      		</div>
+						    	</div>
+						  	</div>
+						</div>
+						<input type="reset" name="Resetear" value="Limpiar" class="botonForm">
+					</div>
+				</form>
+			</div>
+		</section>
+		<button class="botonVolver border-0"><a href="index.html">volver</a></button>
+
+		<script src="js/jquery-3.5.1.slim.min.js"></script>
+	    <script src="js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

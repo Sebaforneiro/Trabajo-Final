@@ -50,49 +50,45 @@ body {
 
 /*HEADER!!!!!*/
 #header {
-  display: grid;
-  grid-template-columns: 40% 35% 35%;
-  grid-template-areas: "logo menu menu";
+  display: flex;
   background-color: #f8dc81;
-  min-height: 90px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 130px;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
+  margin: auto;
   border-bottom: 1px solid #ccc;
   justify-content: center;
-}
-#header .miLogo {
-  grid-area: logo;
-  display: flex;
-  min-height: 90px;
-  width: 100%;
-  justify-content: center;
   align-items: center;
-  margin: auto;
 }
-#header .miLogo img {
+#header img {
   display: block;
-  width: 110px;
-  padding: 5px 0px;
+  width: 100px;
+  margin-right: 50px;
 }
 #header nav {
-  grid-area: menu;
   display: flex;
-  margin: auto;
   list-style: none;
   flex-direction: row;
-  margin-left: 0px;
-  flex-wrap: wrap;
+  max-height: 120px;
+  background-color: #f8dc81;
+}
+#header nav .show {
+  background-color: #f8dc81;
 }
 #header nav ul {
   margin-bottom: 0px;
 }
 #header nav ul li {
+  list-style-position: inside;
   font-size: 22px;
   display: inline-block;
-  margin-right: 30px;
+  margin: auto;
   font-weight: 700;
+  padding: 0px 10px;
 }
 #header nav ul li a {
   text-decoration: none;
@@ -132,12 +128,14 @@ body {
 #contenedorProductosIndex .productos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 80%;
   margin-top: 80px;
 }
 #contenedorProductosIndex .productos img {
   padding: 10px;
-  width: 33.3%;
+  width: 300px;
   transition: 0.5s;
 }
 #contenedorProductosIndex .productos img:hover {
@@ -150,39 +148,28 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 40px;
+  margin-bottom: 80px;
   max-width: 100%;
   flex-wrap: wrap;
+  padding-bottom: 50px;
   background-color: #a2d0c1;
-  padding-bottom: 150px;
 }
 #sliderIndex .imgContenedorSlider {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 80%;
   margin-top: 80px;
 }
 #sliderIndex .imgContenedorSlider img {
   padding: 10px;
-  width: 33.3%;
+  width: 300px;
   transition: 0.5s;
 }
 #sliderIndex .imgContenedorSlider img:hover {
   transform: scale(1.1);
-}
-
-.contMueblesImagen {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 100px auto;
-  flex-wrap: wrap;
-  max-width: 80%;
-}
-.contMueblesImagen img {
-  width: 300px;
-  padding: 10px;
-  max-width: 80%;
 }
 
 .titulosContenedorIndex {
@@ -213,18 +200,15 @@ body {
   align-items: center;
   width: 100%;
 }
-#footer .cajaIzquierda h3 {
-  width: 50%;
-}
 #footer .cajaIzquierda .infoFooter {
   margin: 10px 0px;
-  width: 50%;
 }
-#footer .cajaIzquierda .infoFooter a {
+#footer .cajaIzquierda .infoFooter p {
   display: flex;
   flex-direction: column;
-  padding: 2px;
+  margin-bottom: 0.5em;
   text-decoration: none;
+  text-align: center;
   color: #fff;
 }
 #footer .cajaCentro {
@@ -234,18 +218,15 @@ body {
   align-items: center;
   width: 100%;
 }
-#footer .cajaCentro h3 {
-  width: 50%;
-}
 #footer .cajaCentro .novedadesFooter {
   margin: 10px 0px;
-  width: 50%;
 }
 #footer .cajaCentro .novedadesFooter a {
   display: flex;
   flex-direction: column;
-  padding: 2px;
+  margin-bottom: 0.5em;
   text-decoration: none;
+  text-align: center;
   color: #fff;
 }
 #footer .cajaDerecha {
@@ -255,21 +236,26 @@ body {
   align-items: center;
   width: 100%;
 }
-#footer .cajaDerecha h3 {
-  width: 50%;
-}
 #footer .cajaDerecha .redesSociales {
   margin: 10px 0px;
   display: flex;
   flex-direction: row;
-  width: 50%;
 }
 #footer .cajaDerecha .redesSociales img {
   display: flex;
   width: 40px;
-  margin-right: 20px;
+  padding: 0px 5px;
 }
 
+@media all and (max-width: 700px) {
+  #footer {
+    grid-template-columns: 100%;
+    grid-template-areas: "informacion" "novedades"  "redesSociales";
+  }
+  #footer .cajaIzquierda, #footer .cajaCentro, #footer .cajaDerecha {
+    margin-bottom: 30px;
+  }
+}
 .clear {
   clear: both;
 }
@@ -416,6 +402,58 @@ body {
     transform: rotateY(0deg);
   }
 }
+@media all and (max-width: 760px) {
+  .animacionEnviosCont {
+    width: 400px;
+    height: 160px;
+    margin: auto;
+    margin: 30px auto;
+    overflow: hidden;
+  }
+
+  @keyframes animaEnvio {
+    0% {
+      margin-left: -200px;
+    }
+    10% {
+      margin-left: -50px;
+    }
+    20% {
+      margin-left: 100px;
+    }
+    30% {
+      margin-left: 250px;
+    }
+    40% {
+      margin-left: 400px;
+      transform: rotateY(0deg);
+    }
+    50% {
+      margin-left: 550px;
+      transform: rotateY(180deg);
+    }
+    60% {
+      margin-left: 400px;
+      transform: rotateY(180deg);
+    }
+    70% {
+      margin-left: 250px;
+      transform: rotateY(180deg);
+    }
+    80% {
+      margin-left: 100px;
+      transform: rotateY(180deg);
+    }
+    90% {
+      margin-left: -50px;
+      transform: rotateY(180deg);
+    }
+    100% {
+      margin-left: -200px;
+      transform: rotateY(180deg);
+    }
+  }
+}
 .animacionImagen {
   width: 150px;
   animation-name: animaEnvio;
@@ -456,86 +494,46 @@ body {
 
 /*CONTACTO!!!!!!!!!!!!*/
 #contacto {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "datos formulario";
-  max-width: 1140px;
+  display: flex;
   margin: auto;
   margin-top: 200px;
-  height: 500px;
   margin-bottom: 100px;
-  grid-column-gap: 5px;
-}
-#contacto .datos {
-  grid-area: datos;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 30px;
-  align-items: center;
-  max-height: 500px;
-  background-color: #a2d0c1;
-}
-#contacto .datos h3 {
-  font-size: 22px;
-  font-weight: 700;
-  padding: 10px 50px;
-  font-size: 1.3rem;
-  text-transform: uppercase;
 }
 #contacto .formulario {
-  grid-area: formulario;
   display: flex;
   flex-direction: column;
   padding: 35px 60px;
-  align-items: flex-start;
+  align-items: center;
   background-color: #a2d0c1;
 }
 #contacto .formulario h3 {
-  font-size: 22px;
   font-weight: 700;
-  padding: 10px 50px;
-  font-size: 1.3rem;
+  padding: 10px 10px 30px;
+  font-size: 1.7rem;
   text-transform: uppercase;
+  margin: auto;
 }
 #contacto .formulario form {
   display: flex;
   flex-direction: column;
-  width: 400px;
   padding: 15px 50px;
 }
-#contacto .formulario form .contBotonForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5px;
-}
-#contacto .formulario form .contBotonForm .btn-secondary {
+#contacto .formulario form .btn-secondary {
   background-color: grey;
   color: #000;
 }
+#contacto .formulario form textarea {
+  resize: none;
+}
 #contacto .formulario .botonForm {
-  width: 180px;
-  margin-top: 5px;
+  margin: 10px 0px;
 }
-#contacto .formulario .newsForm {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 3px;
-}
-#contacto .formulario .newsForm label {
-  margin-right: 10px;
-}
-#contacto .formulario .asuntoForm {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin: auto;
-  padding: 5px 0px;
-}
-#contacto .formulario .asuntoForm label {
-  margin-right: 10px;
+
+#mapaUbicacion {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 100px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -23,47 +23,42 @@ body{
 }
 /*HEADER!!!!!*/
 #header{
-	display: grid;
-	grid-template-columns: 40% 35% 35%;
-	grid-template-areas: 
-	"logo menu menu";
+	display: flex;
 	background-color: $colorHeader;
-	min-height: 90px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-height: 130px;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 100;
+	margin: auto;
 	border-bottom: 1px solid #ccc;
 	justify-content: center;
-	.miLogo{
-		grid-area: logo;
-		display: flex;
-		min-height: 90px;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		img{
-			display: block;
-			width: 110px;
-			padding: 5px 0px;
-		}	
+	align-items: center;
+	img{
+		display: block;
+		width: 100px;
+		margin-right: 50px;
 	}
 	nav{
-		grid-area: menu;
 		display: flex;
-		margin: auto;
 		list-style: none;
 		flex-direction: row;
-		margin-left: 0px;
-		flex-wrap: wrap;
+		max-height: 120px;
+		background-color: $colorHeader;
+		.show{
+			background-color: $colorHeader;
+		}
 		ul{
 			margin-bottom: 0px;
-			li{
+				li{
+				list-style-position: inside;	
 				font-size: 22px;
 				display: inline-block;
-				margin-right: 30px;
+				margin: auto;
 				font-weight: 700;
+				padding: 0px 10px;
 				a{
 					text-decoration: none;
 					color: $colorTextoPrimario;
@@ -72,6 +67,7 @@ body{
 		}
 	}
 }
+
 
 .carousel {
 	margin-top: 100px;
@@ -108,11 +104,13 @@ body{
 	.productos{
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
 		width: 80%;
 		margin-top: 80px;
 		img{
 			padding: 10px;
-			width: 33.3%;
+			width: 300px;
 			transition: 0.5s;
 		}	
 		img:hover{
@@ -127,41 +125,30 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-	margin-top: 80px;
+	margin-top: 40px;
+	margin-bottom: 80px;
 	max-width: 100%;
 	flex-wrap: wrap;
+	padding-bottom: 50px;
 	background-color: $colorCuerpo;
-	padding-bottom: 150px;
 	.imgContenedorSlider {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
 		width: 80%;
 		margin-top: 80px;
 		img{
 			padding: 10px;
-			width: 33.3%;
+			width: 300px;
 			transition: 0.5s;
 		}	
 		img:hover{
 			transform: scale(1.1);
 		}
 	}
-}
+}	
 
-
-.contMueblesImagen{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin: 100px auto;
-	flex-wrap: wrap;
-	max-width: 80%;
-	img{
-		width: 300px;
-		padding: 10px;
-		max-width: 80%;
-	}
-}
 
 .titulosContenedorIndex {
 		font-size: 45px;
@@ -192,17 +179,14 @@ body{
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		h3{
-			width: 50%;
-		}
 		.infoFooter{
 			margin: 10px 0px;
-			width: 50%;
-			a{
+			p{
 				display: flex;
 				flex-direction: column;
-				padding: 2px;
+				margin-bottom: 0.5em;
 				text-decoration: none;
+				text-align: center;
 				color: $colorTextoSecundario;
 			}
 		}
@@ -213,17 +197,14 @@ body{
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		h3{
-			width: 50%;
-		}
 		.novedadesFooter {
 			margin: 10px 0px;
-			width: 50%;
 			a{
 				display: flex;
 				flex-direction: column;
-				padding: 2px;
+				margin-bottom: 0.5em;
 				text-decoration: none;
+				text-align: center;
 				color: $colorTextoSecundario;
 			}
 		}
@@ -234,22 +215,32 @@ body{
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		h3{
-			width: 50%;
-		}
 		.redesSociales {
 			margin: 10px 0px;
 			display: flex;
 			flex-direction: row;
-			width: 50%;
 			img{
 				display: flex;
 				width: 40px;
-				margin-right: 20px;
+				padding: 0px 5px;
 			}
 		}
 	}
 }
+
+@media all and (max-width: 700px) {
+	#footer{
+		grid-template-columns: 100%;
+		grid-template-areas: 
+		"informacion"
+		"novedades" 
+		"redesSociales";
+		.cajaIzquierda, .cajaCentro, .cajaDerecha{
+			margin-bottom: 30px;
+		}
+	}
+}
+
 
 .clear{
 	clear: both;
@@ -405,6 +396,60 @@ body{
 	}
 }
 
+@media all and (max-width: 760px) {
+	.animacionEnviosCont{
+	width: 400px;
+	height: 160px;
+	margin: auto;
+	margin: 30px auto;
+	overflow: hidden;
+}
+@keyframes animaEnvio {
+
+	0%{
+		margin-left: -200px;
+	}
+	10%{
+		margin-left: -50px;
+	}
+	20%{
+		margin-left: 100px;
+	}
+	30%{
+		margin-left: 250px;
+	}
+	40%{
+		margin-left: 400px;
+		transform: rotateY(0deg);
+	}
+	50%{
+		margin-left: 550px;	
+		transform: rotateY(180deg);
+	}
+	60%{
+		margin-left: 400px;
+		transform: rotateY(180deg);
+	}
+	70%{
+		margin-left: 250px;
+		transform: rotateY(180deg);
+	}
+	80%{
+		margin-left: 100px;
+		transform: rotateY(180deg);
+	}
+	90%{
+		margin-left: -50px;
+		transform: rotateY(180deg);
+	}
+	100%{
+		margin-left: -200px;
+		transform: rotateY(180deg);
+	}
+}
+}
+
+
 .animacionImagen{
 	width: 150px;
 	animation-name: animaEnvio;
@@ -447,87 +492,45 @@ body{
 /*CONTACTO!!!!!!!!!!!!*/
 
 #contacto{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-areas: 
-	"datos formulario";
-	max-width: 1140px;
+	display: flex;
 	margin: auto;
 	margin-top: 200px;
-	height: 500px;
 	margin-bottom: 100px;
-	grid-column-gap: 5px;
-	.datos{
-		grid-area: datos;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		padding: 30px;
-		align-items: center;
-		max-height: 500px;
-		background-color: #a2d0c1;
-		h3{
-			font-size: 22px;
-			font-weight: $font-bold;
-		 	padding: 10px 50px;
-		 	font-size: 1.3rem;
-			text-transform: uppercase;	
-		 }
-	}
 	.formulario{
-		grid-area: formulario;
 		display: flex;
 		flex-direction: column;
 		padding: 35px 60px;
-		align-items: flex-start;
+		align-items: center;
 		background-color: $colorCuerpo;
 		h3{
-			font-size: 22px;
 			font-weight: $font-bold;
-		 	padding: 10px 50px;
-		 	font-size: 1.3rem;
+		 	padding: 10px 10px 30px;
+		 	font-size: 1.7rem;
 			text-transform: uppercase;	
+			margin: auto;
 		}
 		form{
 			display: flex;
 			flex-direction: column;
-			width: 400px;
 			padding: 15px 50px;
-			.contBotonForm{
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-top: 5px;
-				.btn-secondary{
-					background-color: grey;
-					color: $colorTextoPrimario;
-				}
-			}			
+			.btn-secondary{
+				background-color: grey;
+				color: $colorTextoPrimario;
+			}	
+			textarea{
+				resize: none;
+			}		
 		}
 		.botonForm{
-			width: 180px;
-			margin-top: 5px;
+			margin: 10px 0px;
 
-		}
-		.newsForm{
-			margin-top: 15px;
-			margin-bottom: 10px;
-			margin: auto;
-			padding-top: 10px;
-			padding-bottom:3px;
-			label{
-				margin-right: 10px;
-			}
-		}
-		.asuntoForm{
-			margin-top: 10px;
-			margin-bottom: 10px;
-			margin: auto;
-			padding: 5px 0px;
-			label{
-				margin-right: 10px;
-			}
 		}
 	}
 }
 
+#mapaUbicacion{
+	display: flex;
+	width: 100%;
+	height: 500px;
+	margin-bottom: 100px;
+}

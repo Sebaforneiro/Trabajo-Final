@@ -55,28 +55,28 @@
 		</header>	
 		<section id="contacto">
 			<div class="formulario container">
-	      		<form>
+	      		<form method="GET" action="recibe.html" novalidate>
 					<h3>Envianos tu consulta</h3>
 	      			<div class="form-group">
-				    	<label for="exampleInputEmail1">Nombre y Apellido</label>
-					    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    	<label for="validationCustom01">Nombre</label>
+					    <input name="input_name" type="text" class="form-control" id="validationCustom01">
 				  	</div>
 				  	<div class="form-group">
-				    	<label for="exampleInputEmail1">Email</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				    	<label for="validationCustom02">Apellido</label>
+					    <input name="input_surname" type="text" class="form-control" id="validationCustom02">
 				  	</div>
-				  	<div class="form-group">
-					    <label for="exampleInputPassword1">Telefono</label>
-					    <input type="tel" class="form-control" id="exampleInputPassword1">
-					</div>
 					<div class="form-group">
-						<textarea name="Campo_area" placeholder="Dejanos tu mensaje" class="form-control"></textarea>
+				    	<label for="exampleInputEmail1">E-mail</label>
+				    	<input type="email" name=input_email class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				  	</div>
+					<div class="form-group">
+						<textarea name="input_area" placeholder="Dejanos tu mensaje" class="form-control"></textarea>
 						</div>
 					  <div class="form-group form-check">
-				    	<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				    	<input type="checkbox" name=news_ok class="form-check-input" id="exampleCheck1">
 				    	<label class="form-check-label" for="exampleCheck1">Deseo recibir novedades</label>
 				  	</div>
-					<button type="button botonForm" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+					<button type="button botonForm" class="btn btn-secondary">
 						ENVIAR FORMULARIO
 					</button>			
 					<input type="reset" name="Resetear" value="Limpiar" class="btn btn-secondary botonForm">	

@@ -471,8 +471,8 @@ body {
   background-color: #214151;
   color: white; }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 575px) {
   .graciasForm {
-    width: 300px; } }
+    width: 250px; } }
 
 /*# sourceMappingURL=estilos.css.map */

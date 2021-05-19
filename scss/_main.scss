@@ -70,7 +70,7 @@ body{
 
 
 .carousel {
-	margin-top: 100px;
+	margin-top: 120px;
 	.carousel-caption {
 		h1{
 			font-size: 2.5rem;
@@ -119,6 +119,12 @@ body{
 	}
 }	
 
+@media all and (max-width: 760px) {
+	#contenedorProductosIndex .productos img{
+		padding: 10px 0px;
+	}	
+}
+
 #sliderIndex{
 	display: flex;
 	flex-direction: column;
@@ -148,6 +154,12 @@ body{
 		}
 	}
 }	
+
+@media all and (max-width: 760px) {
+	#sliderIndex .imgContenedorSlider img{
+		padding: 10px 0px;
+	}	
+}
 
 
 .titulosContenedorIndex {
@@ -236,7 +248,7 @@ body{
 		"novedades" 
 		"redesSociales";
 		.cajaIzquierda, .cajaCentro, .cajaDerecha{
-			margin-bottom: 30px;
+			margin: 20px 0px;
 		}
 	}
 }
@@ -276,7 +288,7 @@ body{
 }
 
 .textoExtendido{
-	max-width: 70%;
+	max-width: 60%;
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -286,6 +298,13 @@ body{
 		word-spacing: 0.5px;
 	}
 }
+
+@media all and (max-width: 760px) {
+	.textoExtendido{
+		max-width: 90%;
+	}	
+}
+
 
 .titulosPrincipales {
 	margin-top: 150px;
@@ -325,6 +344,16 @@ body{
 	}
 }
 
+@media all and (max-width: 575px) {
+	.contNosotrosImagen{
+		max-width: 100%;
+		img{
+			padding: 10px 0px;
+			max-width: 100%;
+		}	
+	}	
+}
+
 
 /*MUEBLES!!!!!!!*/
 
@@ -341,6 +370,18 @@ body{
 		max-width: 80%;
 	}
 }
+
+@media all and (max-width: 575px) {
+	.contMueblesImagen{
+		max-width: 100%;
+		img{
+			padding: 10px 0px;
+			max-width: 100%;
+		}	
+	}	
+}
+
+
 
 /*ENVIOS!!!!!!!!!!*/
 
@@ -398,7 +439,7 @@ body{
 
 @media all and (max-width: 760px) {
 	.animacionEnviosCont{
-	width: 400px;
+	width: 320px;
 	height: 160px;
 	margin: auto;
 	margin: 30px auto;
@@ -512,12 +553,11 @@ body{
 		form{
 			display: flex;
 			flex-direction: column;
-			padding: 15px 50px;
 			.btn-secondary{
 				background-color: grey;
 				color: $colorTextoPrimario;
 			}	
-			textarea{
+			textarea {
 				resize: none;
 			}		
 		}
@@ -528,9 +568,29 @@ body{
 	}
 }
 
+
 #mapaUbicacion{
 	display: flex;
 	width: 100%;
 	height: 500px;
 	margin-bottom: 100px;
+}
+
+.graciasForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 150px auto;
+	width: 350px;
+	height: 150px;
+	font-size: 1.5rem;
+	font-weight: 700;
+	background-color: $colorFooter;
+	color: white;
+}
+@media all and (max-width: 600px) {
+	.graciasForm{
+		width: 300px;
+	}	
 }
